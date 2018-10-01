@@ -27,6 +27,52 @@ public class Principal {
 
     public Principal() {
         this.sorteio = new Random();
+
+
+
+        atacarButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                //TODO preciso ser melhorado
+
+                if (aldeaoRadioButton.isSelected()) {
+                    ((Tela) painelTela).atacarAldeao();
+                }
+            }
+        });
+        buttonCima.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                //TODO preciso ser melhorado
+
+                ((Tela) painelTela).movimentarAldeao(0);
+            }
+        });
+        buttonBaixo.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                //TODO preciso ser melhorado
+
+                ((Tela) painelTela).movimentarAldeao(1);
+            }
+        });
+        buttonEsquerda.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                //TODO preciso ser melhorado
+
+                ((Tela) painelTela).movimentarAldeao(2);
+            }
+        });
+        buttonDireita.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                //TODO preciso ser melhorado
+
+                ((Tela) painelTela).movimentarAldeao(3);
+            }
+        });
+
         bCriaAldeao.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -48,39 +94,21 @@ public class Principal {
                 // Foi necessário a coerção de tipos pois painelTela é do tipo JPanel.
                 // Isso só foi possível pois Tela é uma subclasse de JPanel.
                 ((Tela) painelTela).criarAldeao(x, y);
-                painelTela.requestFocus();
             }
         });
-        atacarButton.addActionListener(new ActionListener() {
+
+        bCriaArqueiro.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if (aldeaoRadioButton.isSelected()) {
-                    ((Tela) painelTela).atacarAldeao();
-                }
+                //TODO preciso ser implementado
+                JOptionPane.showMessageDialog(null, "Preciso ser implementado", "Criar Arqueiro", JOptionPane.INFORMATION_MESSAGE);
             }
         });
-        buttonCima.addActionListener(new ActionListener() {
+        bCriaCavaleiro.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                ((Tela) painelTela).movimentarAldeao(0);
-            }
-        });
-        buttonBaixo.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                ((Tela) painelTela).movimentarAldeao(1);
-            }
-        });
-        buttonEsquerda.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                ((Tela) painelTela).movimentarAldeao(2);
-            }
-        });
-        buttonDireita.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                ((Tela) painelTela).movimentarAldeao(3);
+                //TODO preciso ser implementado
+                JOptionPane.showMessageDialog(null, "Preciso ser implementado", "Criar Cavaleiro", JOptionPane.INFORMATION_MESSAGE);
             }
         });
     }
@@ -104,6 +132,6 @@ public class Principal {
 
     private void createUIComponents() {
         // TODO: place custom component creation code here
-        this.painelTela = new Tela(this);
+        this.painelTela = new Tela();
     }
 }

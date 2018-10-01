@@ -19,3 +19,6 @@ Como resultado final, espera-se que o usuário possa:
 - Fazer com que todos os objetos do tipo Cavaleiro ataquem
 - Fazer com que todos os objetos do tipo Arqueiro ataquem
 - Fazer com que todos os objetos, independente do tipo, ataquem
+
+
+**Nota:** Projeto desenvolvido com IntelliJ IDEA 2018.2 e JDK 11 

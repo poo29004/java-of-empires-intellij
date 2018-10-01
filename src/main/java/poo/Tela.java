@@ -9,10 +9,11 @@ import java.util.ArrayList;
 public class Tela extends JPanel {
 
     private ArrayList<Aldeao> aldeoes;
-    private Principal principal;
 
-    public Tela(Principal p) {
-        this.principal = p;
+    public Tela() {
+
+        //TODO preciso ser melhorado
+
         this.setBackground(Color.white);
         this.aldeoes = new ArrayList<>();
     }
@@ -25,10 +26,10 @@ public class Tela extends JPanel {
     public void paint(Graphics g) {
         super.paint(g);
 
+        //TODO preciso ser melhorado
+
         // percorrendo a lista de aldeões e pedindo para cada um se desenhar na tela
-        aldeoes.forEach(a -> {
-            a.desenhar(g);
-        });
+        aldeoes.forEach(aldeao -> aldeao.desenhar(g));
 
         // liberando o contexto gráfico
         g.dispose();
@@ -53,9 +54,9 @@ public class Tela extends JPanel {
      * @param direcao
      */
     public void movimentarAldeao(int direcao) {
-        for (Aldeao aldeao : aldeoes) {
-            aldeao.mover(direcao);
-        }
+        //TODO preciso ser melhorado
+
+        aldeoes.forEach(aldeao -> aldeao.mover(direcao));
         // Depois que as coordenadas foram atualizadas é necessário repintar o
         //JPanel
         this.repaint();
@@ -66,10 +67,10 @@ public class Tela extends JPanel {
      */
     public void atacarAldeao() {
 
+        //TODO preciso ser melhorado
+
         // Percorrendo a lista de aldeões e pedindo para todos atacarem
-        aldeoes.forEach(a -> {
-            a.atacar();
-        });
+        aldeoes.forEach(aldeao -> aldeao.atacar());
 
         // Fazendo o JPanel ser redesenhado
         this.repaint();
